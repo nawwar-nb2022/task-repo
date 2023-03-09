@@ -1,0 +1,92 @@
+@import "../../index.scss";
+.Work{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $text;
+    margin-bottom: 10%;
+    .main{
+        @include mobile{
+            width: 100%;
+        }
+        width: 36%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        button{
+            cursor: pointer;
+            border:  none;
+            outline: none;
+            background-image : linear-gradient(to right , $background ,$buttons);
+            padding : 10px 20px;
+            color: white;
+            border-radius: 20px;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 40px;
+            text-align: center;
+        }
+        h4{
+            font-weight: 400;
+            font-size: 20px;
+            margin: 0;
+            opacity: .8;
+            padding-left: 7%;
+        }
+        h5{
+            font-weight: 400;
+            font-size: 12px;
+            opacity: .7;
+            @include mobile{
+                text-align: center;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .footer{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+        margin-top: 0;
+        @include mobile{
+            flex-direction: column  ;
+           
+        }
+        .container{
+            @include mobile{
+                margin-bottom: 10%;
+            }
+            border-top: 2px solid rgb(184, 181, 181);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            .title{
+                text-align: center;
+                width: 100%;
+                margin: 10% 0;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .body{
+                text-align: center;
+                margin: 0 6%;
+                opacity: .7;
+                font-size: 13px;
+            }
+        }
+        .color {
+            color: $buttons;
+            border-top: 2px solid $buttons;
+        }
+    }
+}

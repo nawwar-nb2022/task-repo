@@ -1,0 +1,130 @@
+
+@import "../../index.scss";
+.footer{
+    margin-top: 15%;
+    padding: 2% 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: $text;
+    .top-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .top-footer{
+            @include mobile{
+                flex-direction: column;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 5%;
+            .left{
+                flex: 1;
+                @include mobile{
+                    margin:0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                flex-direction: column;
+                }
+                img{
+                    width: 124px;
+                }
+                p{
+                    font-weight: 200;
+                    @include mobile{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            .right{
+                flex:1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                @include mobile {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                gap: 10px;
+                .button{
+                    cursor: pointer;
+                    &:active{
+                        transform: scale(1.01);
+                    }
+                }
+
+            }
+        }
+        .bottom-footer{
+            width: 100%;
+            ul{
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                gap: 15px;
+                @include mobile{
+                    flex-wrap: wrap;
+                    gap: 35px;
+                }
+                li{
+                    list-style-type: none;
+                    font-weight: 300;
+                    cursor: pointer;
+                    transition: .5s  all ease;
+                    border-radius:20px ;
+                    &:active{
+                        background-color : lightgray;
+                        box-shadow: 0px 0px 10px 10px lightgray;
+                    }
+                }
+                .active{
+                    color: $buttons;
+                }
+            }
+        }
+    }
+    .bottom-main{
+        width: 100%;
+
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 5%;
+            @include mobile {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .left{
+                font-weight: 200;
+                font-size: 15px;
+            }
+            .right{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                span{
+                    cursor: pointer;
+                }
+                img{
+                    width: 20px;
+
+                }
+                 &>*{
+                     color: black;
+                 }   
+            }
+        }
+    }
+}

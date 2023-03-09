@@ -1,0 +1,78 @@
+@import "../../index.scss";
+.Intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $text;
+    margin-bottom: 10%;
+    @include mobile{
+        margin-bottom: 1%;
+    }
+    .top{
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mobile{
+            flex-direction: column;
+        }
+        .left{
+            flex:3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-size: 43px;
+                font-weight: 500;
+                margin: 18%;
+                margin-right: 10%;
+                @include mobile{
+                    font-size: 20px;
+                    margin-left:0 ;
+                    margin-right:0 ;
+                }
+                .liner{
+                    background-image: linear-gradient(45deg, $buttons , $background);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                }
+
+            }
+        }
+        .right{
+            flex: 2;
+            margin-right: 10%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 10%;
+        gap: 20px;
+        p{
+            width: 50%;
+            @include mobile{
+                width: 90%;
+                margin: 5%;
+            }
+        }
+        .button{
+            display: flex;
+            gap :20px;
+            img{
+                cursor: pointer;
+            }
+            @include mobile{
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 10%;
+            }
+        }
+    }
+}

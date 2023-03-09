@@ -4,10 +4,12 @@ import "./Navbar.scss"
 import { Link } from "react-router-dom";
 const Navbar = () => {
     const [active , setActive] = useState()
+    const  activeFunc = (e)=>{
+        setActive(e.target.id)
+      }
     const [toggle , setToggle] = useState("hide")
     const toggleFun =()=>{
         toggle=="hide"?setToggle("show"):setToggle("hide")
-        console.log(toggle)
     }
    useEffect(()=>{
        console.log(active);
@@ -27,53 +29,48 @@ const Navbar = () => {
             <div className={`tabs ${toggle}`} >
                 <div className="navs">
                 <div className={active == "1"? "tab inTab" : "tab" } 
-                id="1" 
                 onClick={(e)=>{
                     toggleFun()
-                    setActive(e.target.id)
+                    activeFunc(e)
                     }}>
-                        <Link to="/Buy">
+                        <Link to="/Buy" id="1">
                           Buy
                         </Link>
                         </div>
                 <div className={active == "2"? "tab inTab" : "tab" } 
-                id="2" 
                 onClick={(e)=>{
                     toggleFun()
-                    setActive(e.target.id)
+                    activeFunc(e)
                     }}>
-                        <Link to="/">
+                        <Link to="/" id="2" >
                             Discover Deals
                         </Link>
 
                         </div>
                 <div className={active == "3"? "tab inTab" : "tab" } 
-                id="3" 
                 onClick={(e)=>{
                     toggleFun()
-                    setActive(e.target.id)
+                    activeFunc(e)
                     }}>
-                        <Link to="/">
+                        <Link to="/" id="3" >
                             How it works
                         </Link> 
                     </div>
                 <div className={active == "4"? "tab inTab" : "tab" } 
-                id="4" 
                 onClick={(e)=>{
                     toggleFun()
-                    setActive(e.target.id)
+                    activeFunc(e)
                     }}>
-                        <Link to="/">
+                        <Link to="/" id="4" >
                             For partner
                         </Link>                         
                         </div>
                 <div className={active == "5"? "tab inTab" : "tab" } 
-                id="5" 
                 onClick={(e)=>{
                     toggleFun()
-                    setActive(e.target.id)
+                    activeFunc(e)
                     }}>
-                        <Link to="/">
+                        <Link to="/" id="5" >
                         Blog
                         </Link>                         
                         

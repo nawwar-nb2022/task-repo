@@ -7,6 +7,7 @@ const Navbar = () => {
     const [toggle , setToggle] = useState("hide")
     const toggleFun =()=>{
         toggle=="hide"?setToggle("show"):setToggle("hide")
+        console.log(toggle)
     }
    useEffect(()=>{
        console.log(active);
@@ -19,7 +20,7 @@ const Navbar = () => {
             </div>
             
             <div className="responsive-button" 
-            onClick={toggleFun}
+                onClick={toggleFun}
             >
                 <MenuIcon/>
             </div>
@@ -82,7 +83,7 @@ const Navbar = () => {
             <div className="login">
                 <button >
                     Become a partner
-                    </button>
+                </button>
             </div>
             
             </div>
